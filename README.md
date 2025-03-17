@@ -1,5 +1,5 @@
 # HWACC2025
-# Hardware Accelerators Course Spiring 2025
+# Hardware Accelerators Course - Spiring 2025
 
 ## Overview
 This repository contains materials for the **Hardware Accelerators** course, including assignments, projects, and resources related to hardware acceleration techniques.
