@@ -1,4 +1,4 @@
-# Assignment 1: Hardware Accelerator  
+# Hardware Accelerator Assignment 1:  K Means Clustering on High Dimensional Data
 
 ## Faculty of Engineering and Computer Science - Shahid Beheshti University  
 
