@@ -8,8 +8,13 @@ This repository contains materials for the **Hardware Accelerators** course, inc
 - **Assistant Professor:** [Dara Rahmati](https://scholar.google.com/citations?user=xwJgOl0AAAAJ&hl=en)
 
 ## Teaching Assistants
+
+- **[Matin Firoozbakht](https://github.com/matinfirooz)**
 - **[Ida Taaki](https://github.com/idataaki)**  
-- **[Matin Firoozbakht](https://github.com/matinfirooz)**  
+
+## Course Book  
+We use the following book as a reference:  
+[**"Hardware Accelerator Systems for Artificial Intelligence and Machine Learning"**](https://link.springer.com/book/10.1007/978-3-031-01766-7)  
 
 ## Contents 
 - Assignments  
