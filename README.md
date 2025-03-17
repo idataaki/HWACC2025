@@ -14,7 +14,7 @@ This repository contains materials for the **Hardware Accelerators** course, inc
 
 ## Course Book  
 We use the following book as a reference:  
-[**"Hardware Accelerator Systems for Artificial Intelligence and Machine Learning"**](https://link.springer.com/book/10.1007/978-3-031-01766-7)  
+[**"Efficient Processing of Deep Neural Networks"**](https://link.springer.com/book/10.1007/978-3-031-01766-7)  
 
 ## Contents 
 - Assignments  
