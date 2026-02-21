@@ -220,7 +220,7 @@ Optimize performance using a two-level memory system.
 
 ---
 
-## Submission Guidelines
+<!-- ## Submission Guidelines
 
 **File Format:** ZIP file named `HW3_StudentNumber_Fullname.zip`
 
@@ -238,7 +238,7 @@ Optimize performance using a two-level memory system.
 - Contact TA on Telegram before requesting extension
 - Students have 4 coupon days available
 
----
+--- -->
 
 ## Key Learning Outcomes
 
@@ -259,7 +259,3 @@ Optimize performance using a two-level memory system.
 - Fashion MNIST: https://github.com/zalandoresearch/fashion-mnist
 
 ---
-
-Good luck!
-
-**Instructor:** Rahmati

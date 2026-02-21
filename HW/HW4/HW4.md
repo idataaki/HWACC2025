@@ -16,11 +16,6 @@
 
 This assignment focuses on **quantization** and **pruning** techniques for Convolutional Neural Networks (CNNs). Students will implement quantization methods to reduce model size and computational complexity while maintaining acceptable accuracy levels.
 
-**Key Concepts:**
-- Model compression through quantization
-- Reducing memory footprint and computational cost
-- Enabling deployment on resource-constrained devices
-
 ---
 
 ## What is Quantization and Why Use It?
@@ -36,14 +31,9 @@ This massive storage requirement makes deployment on personal computers or mobil
 
 ### Computational Efficiency
 
-As shown in Figure 1 (from reference [1]), integer operations are significantly faster and more energy-efficient than floating-point operations on digital hardware:
+As shown in Figure 1 (from reference [1]), integer operations are significantly faster and more energy-efficient than floating-point operations on digital hardware. Quantization converts Results in reducing model size, faster inference and lower memory usage.
 
-- **Integer operations:** Lower area cost, lower energy consumption
-- **Floating-point operations:** Higher complexity, more resources required
-
-**Quantization converts:**
-- High-precision floating-point values (e.g., 32-bit) → Low-precision integers (e.g., 8-bit)
-- Result: Reduced model size, faster inference, lower memory usage
+![area and energy efficiency of different precision](/HWACC2025/pics/area-energy-different-precision.png)*Figure 1*
 
 ---
 
@@ -51,13 +41,10 @@ As shown in Figure 1 (from reference [1]), integer operations are significantly 
 
 ### 1. Symmetric Quantization
 
-**Concept:** Assumes data is distributed symmetrically around zero.
-
-**Characteristics:**
-- Integer range is symmetric around zero
+- Assumes data is distributed symmetrically around zero.
 - For 8-bit signed: [-127, +127]
-- Only requires **scale parameter**
-- **Zero-point** is always 0
+- Only requires *scale parameter*
+- *Zero-point* is always 0
 
 **Formula:**
 ```
@@ -68,6 +55,7 @@ scale = max(|x|) / 127
 ```
 
 **Example:**
+
 Given tensor: `[43.21, -44.93, 0, 22.99, -43.93, -11.35, 38.48, -20.49, -38.61, -28.02]`
 
 - Max absolute value: 44.93
@@ -80,10 +68,7 @@ Given tensor: `[43.21, -44.93, 0, 22.99, -43.93, -11.35, 38.48, -20.49, -38.61, 
 
 ### 2. Asymmetric Quantization
 
-**Concept:** For data with non-symmetric distribution and specific bias.
-
-**Characteristics:**
-- Integer range can be asymmetric
+- For data with non-symmetric distribution and specific bias.
 - For 8-bit unsigned: [0, 255]
 - Requires two parameters: **scale** and **zero-point**
 - Zero-point maps floating-point zero to an integer value
@@ -97,6 +82,7 @@ scale = (x_max - x_min) / 255
 ```
 
 **Example:**
+
 Same tensor as above:
 - x_min = -44.93, x_max = 43.21
 - Scale: `88.14 / 255 ≈ 0.3457`
@@ -121,21 +107,7 @@ Quantization is applied **after** the model is fully trained with high precision
 
 ---
 
-## Assignment Tasks
-
-### Dataset: Fashion-MNIST
-- **Training samples:** 60,000 images
-- **Test samples:** 10,000 images
-- **Image size:** 28×28 grayscale
-- **Classes:** 10 clothing categories
-- **Source:** https://github.com/zalandoresearch/fashion-mnist
-
-### Network: LeNet-5
-Use the LeNet-5 architecture for classification.
-
----
-
-## Part 1: Manual Quantization Implementation
+## Implementation
 
 ### Step 1: Manual Implementation (Without Libraries)
 
@@ -143,8 +115,8 @@ Use the LeNet-5 architecture for classification.
 
 **Requirements:**
 - Implement both symmetric and asymmetric quantization **manually**
-- NO neural network libraries allowed (TensorFlow, PyTorch, etc.)
-- NumPy is **allowed** for basic operations
+- No neural network libraries allowed (TensorFlow, PyTorch, etc.)
+- NumPy is allowed for basic operations
 - Use provided data samples
 
 **Quantization Levels to Test:**
@@ -210,50 +182,6 @@ Use the LeNet-5 architecture for classification.
 
 ---
 
-## Implementation Guidelines
-
-**Step 1 - Manual Implementation:**
-```python
-# Use only basic Python and NumPy
-# No PyTorch, TensorFlow, or similar libraries
-# Implement quantization formulas from scratch
-```
-
-**Step 2 - PyTorch Implementation:**
-```python
-# Use PyTorch for model training
-# Use PyTorch quantization APIs
-# Test multiple precision levels
-# Extract and save weights
-```
-
----
-
-## Submission Guidelines
-
-**File Format:** ZIP file named `HW4_StudentNumber_Fullname.zip`
-
-**Structure:**
-- Part 1: Manual quantization implementation
-  - Source code (Python scripts)
-  - Results and plots
-- Part 2: PyTorch-based quantization
-  - Training code
-  - Quantization code
-  - Extracted weights
-  - Results and comparison plots
-- Report (use provided template - **mandatory**)
-
-**Extensions:**
-- Contact TA on Telegram before requesting extension
-- Students have 4 coupon days available
-
-**Important:**
-- Reports must use the provided template
-- Reports outside the template will **not be reviewed**
-
----
-
 ## Key Learning Outcomes
 
 - Understanding quantization fundamentals
@@ -262,7 +190,6 @@ Use the LeNet-5 architecture for classification.
 - Working with different numerical precisions
 - Using PyTorch quantization tools
 - Preparing models for hardware deployment
-- Evaluating model compression techniques
 
 ---
 
@@ -275,17 +202,3 @@ Use the LeNet-5 architecture for classification.
 [3] Fashion-MNIST Dataset: https://github.com/zalandoresearch/fashion-mnist
 
 ---
-
-## Important Notes
-
-- Quantization is not just rounding numbers - it's a systematic process based on statistical analysis
-- Symmetric quantization: simpler, better for weights
-- Asymmetric quantization: more accurate for activations with bias
-- Lower bit-width = higher compression but potentially lower accuracy
-- Goal: Find optimal balance between model size and accuracy
-
----
-
-Good luck!
-
-**Instructor:** Rahmati

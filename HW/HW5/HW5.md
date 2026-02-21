@@ -16,12 +16,6 @@
 
 This assignment introduces **CUDA programming** for GPU acceleration. Students will implement the **Softmax activation function** using CUDA and optimize its performance by experimenting with different block sizes and thread configurations.
 
-**Key Focus:**
-- Learning CUDA programming fundamentals
-- Parallel programming on GPUs
-- Performance optimization
-- Block and thread configuration
-
 ---
 
 ## Introduction to CUDA
@@ -72,97 +66,32 @@ Where:
 3. **Normalization:** Divide exponentials by their sum to get final output
 
 **Result:**
-- All outputs are between 0 and 1
-- Sum of all outputs equals 1
-- Outputs can be interpreted as probabilities
+All outputs are between 0 and 1. Sum of all outputs equals 1 and outputs can be interpreted as probabilities.
 
 ### Example
 
-**Input vector:** `[3.2, 1.3, 0.2, 0.8]`
-
-**After Softmax:** `[0.532, 0.239, 0.107, 0.293]`
-
-All values are probabilities that sum to 1.0
-
----
-
-## Properties and Advantages of Softmax
-
-### Key Properties
-
-1. **Output Range:** All outputs between 0 and 1
-2. **Sum to One:** Total of all outputs equals 1
-3. **Interpretability:** Converts raw scores to understandable probabilities
-
-### Advantages
-
-1. **Probability Distribution:** Creates precise probability distribution for each class
-2. **Confidence Assessment:** Allows evaluation of network's confidence level
-3. **Interpretability:** Probabilities are easier to understand and report than raw scores
-4. **Numerical Stability:** Proper implementation (e.g., subtracting max value) provides good numerical stability
+    Input vector: [3.2, 1.3, 0.2, 0.8]
+    After Softmax: [0.532, 0.239, 0.107, 0.293]
 
 ### Applications
 
 - **Multi-class Classification:** Primary use case
 - **Image Recognition:** Classify images into multiple categories
 - **Natural Language Processing (NLP):** Text classification and language tasks
-- **Recommendation Systems:** Probability-based recommendations
-
-**Example:** In a fruit classification network, Softmax outputs the probability that an image is an apple, orange, or banana, with probabilities summing to 1.
-
----
-
-## Comparison with Other Activation Functions
 
 ### Sigmoid vs. Softmax
-
-- **Sigmoid:** Used in hidden layers or binary classification
-  - Outputs between 0 and 1
-  - No guarantee that outputs sum to 1
-
-- **Softmax:** Used in output layer for multi-class classification
-  - Outputs between 0 and 1
-  - **Guaranteed** to sum to 1
-
-### ReLU vs. Softmax
-
-- **ReLU (Rectified Linear Unit):** Used in hidden layers
-  - Solves vanishing gradient problem
-  - Non-linear transformation
-
-- **Softmax:** Used in output layer
-  - Produces probability distribution
-  - Multi-class classification
-
-**Key Distinction:** Softmax's unique role is in multi-class classification scenarios where outputs must represent a complete probability distribution.
+- Both outputs between 0 and 1
+- Softmax is **Guaranteed** to sum to 1, Sigmoid is not
 
 ---
 
 ## Why Use CUDA for Softmax?
 
-### Computational Challenges
+- **Computational Challenges:** Softmax involves computationally intensive operations such as *Exponential calculation* of input elements and *Normalization* by sum of all exponentials.
 
-Softmax involves two computationally intensive operations:
+- **Sequential Nature:** Softmax Must first compute sum of all exponentials, then use that sum for normalization, This data dependency seems to prevent parallelization.
 
-1. **Exponential calculation** of input elements
-2. **Normalization** by sum of all exponentials
-
-### Sequential Nature
-
-Softmax has an inherently **sequential nature**:
-- Must first compute sum of all exponentials
-- Then use that sum for normalization
-- Data dependency seems to prevent parallelization
-
-### GPU Solution
-
-Despite the sequential nature, **CUDA and GPU architecture** enable parallelization:
-
-- **Thousands of threads** can run simultaneously
-- **Different stages** of Softmax can be parallelized
-- **Independent operations** can be split and executed in parallel
-
-**Key Insight:** By breaking down Softmax into parallelizable sub-tasks, CUDA can dramatically accelerate computation.
+Despite the sequential nature, CUDA and GPU architecture enable parallelization as different stages of Softmax can be parallelized and also some independent operations can be split and executed in parallel.
 
 ---
 
@@ -178,20 +107,9 @@ Evaluate the performance of Softmax function in the **attention layer of Vision 
 - Input vectors typically have **length 197** (for standard ViT)
 - Fast and optimized execution on GPU is critical
 
-### Implementation Requirements
-
-**Task:** Implement Softmax in CUDA with different block configurations
-
-**Block Sizes to Test:**
-- 32 threads per block
-- 64 threads per block
-- 128 threads per block
-- 256 threads per block
-- Additional sizes as needed (512, 1024, etc.)
-
 ### Performance Measurement
 
-For each block size configuration:
+Implement and test with different block sizes (32, 64, 128, 256, etc. threads per block). For each block size configuration:
 
 1. **Measure kernel execution time**
 2. **Record results systematically**
@@ -258,7 +176,6 @@ For each block size configuration:
 - Use **shared memory** for intermediate results
 - Implement **parallel reduction** for sum calculation
 - Consider **numerical stability** (subtract max value before exp)
-- Minimize **memory transfers** between host and device
 
 ### Python Reference Implementation
 
@@ -283,25 +200,6 @@ def softmax(input_vector):
 
 ---
 
-## Vision Transformer Context
-
-### Attention Layer in ViT
-
-- Vision Transformers use self-attention mechanisms
-- Softmax is applied to attention scores
-- Input sequence length for standard ViT: **197 tokens**
-  - 1 class token + 196 patch tokens (14×14 patches)
-
-### Why Vector Length = 197?
-
-- **Class token:** 1
-- **Image patches:** 196 (from 224×224 image divided into 16×16 patches)
-- **Total:** 197 elements in attention computation
-
-This specific vector length should be used for testing to match real Vision Transformer workloads.
-
----
-
 ## Testing and Validation
 
 ### Correctness Verification
@@ -317,35 +215,6 @@ This specific vector length should be used for testing to match real Vision Tran
 2. **Multiple measurements:** Average over multiple runs for reliability
 3. **Consistent conditions:** Same GPU state for all tests
 4. **Timing method:** Use CUDA events or appropriate timing API
-
----
-
-## Submission Guidelines
-
-**File Format:** ZIP file named `HW5_StudentNumber_Fullname.zip`
-
-**Structure:**
-- CUDA source files (.cu, .cuh)
-- Host code for testing
-- Performance data (CSV or text file)
-- Performance graphs (images)
-- Report (use provided template - **mandatory**)
-
-**Report Contents:**
-- CUDA implementation explanation
-- Block size configurations tested
-- Performance results table
-- Performance graph
-- Analysis and conclusions
-- Optimal configuration recommendation
-
-**Extensions:**
-- Contact TA on Telegram before requesting extension
-- Students have 4 coupon days available
-
-**Important:**
-- Reports must use the provided template
-- Reports outside the template will **not be reviewed**
 
 ---
 
