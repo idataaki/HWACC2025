@@ -62,7 +62,7 @@ We use the following book as a reference:
 
 
 ## Contribution
-For questions or contributions, please open an issue or submit a pull request.
+For questions or contributions, please open an issue or submit a pull request. You also can always reach to us directly or via Email.
 
 
 **Shahid Beheshti University - Faculty of Computer Engineering**
