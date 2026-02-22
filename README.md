@@ -11,18 +11,18 @@ This repository contains materials for the **Hardware Accelerators** course, inc
 
 | # | Topic | Description |
 |---|-------|-------------|
-| [HW1](HW1/on-campus%20group/HW1.md) | K-Means Clustering | Implementing K-means algorithm on high-dimensional data |
-| [HW2](HW2/HW2.md) | MLP Implementation | Multilayer Perceptron - software and hardware (Vivado) |
-| [HW3](HW3/HW3.md) | CNN with Systolic Array | LeNet-5 with different dataflows (WS, OS, IS) |
-| [HW4](HW4/HW4.md) | Quantization & Pruning | Post-training quantization techniques |
-| [HW5](HW5/HW5.md) | CUDA Programming | Softmax implementation and GPU optimization |
-| [HW6](HW6/HW6.md) | Energy Evaluation | Timeloop-Accelergy and MAESTRO tools |
+| [HW1](HW/HW1/README.md) | K-Means Clustering | Implementing K-means algorithm on high-dimensional data |
+| [HW2](HW/HW2/README.md) | MLP Implementation | Multilayer Perceptron - software and hardware (Vivado) |
+| [HW3](HW/HW3/README.md) | CNN with Systolic Array | LeNet-5 with different dataflows (WS, OS, IS) |
+| [HW4](HW/HW4/README.md) | Quantization & Pruning | Post-training quantization techniques |
+| [HW5](HW/HW5/README.md) | CUDA Programming | Softmax implementation and GPU optimization |
+| [HW6](HW/HW6/README.md) | Energy Evaluation | Timeloop-Accelergy and MAESTRO tools |
 
 ### Project
 
 | Item | Description |
 |------|-------------|
-| [Final Project](FINALProject.md) | Course final project guidelines |
+| [Final Project](Project/README.md) | Course final project guidelines |
 
 ### Papers & Presentations
 
