@@ -7,13 +7,9 @@
 
 **Submission Format:** A `zip` file named `Fullname_StudentNumber_Project_FINAL.zip`
 
----
-
 ## Overview
 
 Design and implement a hardware accelerator for **LeNet-5 CNN** using **systolic arrays with output-stationary dataflow**. The project combines software optimization techniques (pruning and quantization) with hardware acceleration to create an efficient inference engine for the **Fashion MNIST** dataset.
-
----
 
 ## Dataset
 
@@ -22,8 +18,6 @@ Design and implement a hardware accelerator for **LeNet-5 CNN** using **systolic
 - Each image: 28x28 pixels
 - Zero-padded to 32x32 for hardware implementation
 - 10 classes of fashion items
-
----
 
 ## Phase 1: Software Implementation and Optimization
 
@@ -40,8 +34,6 @@ Implement two pruning methods with different sparsity ratios (25%, 50%, 70%, 90%
 ### Step 3: Combined Optimization
 - Apply pruning followed by quantization
 - Evaluate final model size and accuracy
-
----
 
 ## Phase 2: Hardware Implementation
 
@@ -82,8 +74,6 @@ Implement two pruning methods with different sparsity ratios (25%, 50%, 70%, 90%
 - Synthesis and implementation results
 - Simulation waveforms and testbench files
 
----
-
 ## LeNet-5 Architecture (32x32 input)
 
 - **Input:** 32x32x1
@@ -94,8 +84,6 @@ Implement two pruning methods with different sparsity ratios (25%, 50%, 70%, 90%
 - **Conv5:** 1x1x120 (5x5 kernel, 120 filters, stride 1)
 - **F6 (FC):** 120 units
 - **Output (FC):** 10 units
-
----
 
 ## Key Learning Outcomes
 

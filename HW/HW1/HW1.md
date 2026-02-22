@@ -6,14 +6,14 @@
 
 **Submission Format:** A `zip` file containing the required components as mentioned in the description.  
 
----
+
 
 ## Objective  
 This assignment aims to implement and understand the **KMeans** algorithm and data clustering.  
 
 **Note:** The implementation of **KMeans** must be done **without** using pre-built libraries. Only basic programming language features should be used. However, **Numpy**, **Pandas**, **Matplotlib**, and **Seaborn** are allowed solely for data reading and visualization.  
 
----
+
 
 ## KMeans Algorithm Explanation  
 The **KMeans** algorithm is an **unsupervised learning** method that clusters data into a predefined number of groups, maximizing intra-cluster similarity while minimizing inter-cluster differences.  
@@ -24,7 +24,7 @@ The **KMeans** algorithm is an **unsupervised learning** method that clusters da
 3. **Update** the cluster centers by computing the mean of all assigned points.  
 4. **Repeat** the process until the cluster centers no longer change or a specific iteration limit is reached.  
 
----
+
 
 ## Dataset  
 The dataset used in this assignment contains information about **high schools in Tehran Province**, including educational and financial characteristics.  
@@ -50,7 +50,7 @@ The dataset used in this assignment contains information about **high schools in
 - Educational cost per student
 - High school Graduation rate
 
----
+
 
 ## Requirements  
 - **(A)** The number of clusters `k` must be determined carefully using common selection methods.  
@@ -62,7 +62,7 @@ The dataset used in this assignment contains information about **high schools in
   - **Swarm Plot**  
 - **(D)** The final output should be stored in a **CSV file**, where each row includes the cluster label and the final cluster centroids.  
 
----
+
 
 ## Analysis and Questions  
 Please select and answer **two** of the following questions:  
@@ -71,7 +71,7 @@ Please select and answer **two** of the following questions:
 2. Do schools with stricter admission rates achieve higher average test scores? Provide a statistical analysis and support your findings with visualizations.  
 3. Do schools with a higher number of admitted students have a higher graduation rate? Provide a statistical analysis and support your findings with visualizations.  
 
----
+
 
 ## Data Preprocessing Notes  
 - **Raw values of** `applications`, `admissions`, and `enrolled students` **do not provide meaningful insights alone.** New features such as **acceptance rate** and **enrollment rate** should be calculated.  

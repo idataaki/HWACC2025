@@ -7,13 +7,13 @@
 
 **Submission Format:** A `zip` file containing all required components.
 
----
+
 
 ## Overview
 
 This assignment focuses on implementing a **Multilayer Perceptron (MLP)** neural network for classification tasks. Students will implement the feedforward and backpropagation algorithms from scratch and then create a hardware implementation for inference.
 
----
+
 
 ## Dataset
 
@@ -23,7 +23,7 @@ This assignment focuses on implementing a **Multilayer Perceptron (MLP)** neural
 - Preprocessed data provided in `optdigits.tes` file
 - Each row contains 64 pixel values followed by the label
 
----
+
 
 ## Network Architecture
 
@@ -32,7 +32,7 @@ The MLP network consists of:
 - **Hidden Layer:** 256 neurons with ReLU activation function
 - **Output Layer:** 10 neurons (one per digit class) with Sigmoid activation
 
----
+
 
 ## Part 1: Software Implementation
 
@@ -64,7 +64,7 @@ Implement the MLP network from scratch using Python to understand the training a
 - Matplotlib, Seaborn (for visualization)
 - A Jupyter notebook is provided for quick reference -->
 
----
+
 
 ## Part 2: Hardware Implementation
 
@@ -91,7 +91,7 @@ Implement the trained MLP network in hardware for inference only (no training re
 - Calculate accuracy on test dataset
 - Compare hardware implementation accuracy with software version
 
----
+
 
 <!-- ## Submission Guidelines
 
@@ -106,7 +106,7 @@ Implement the trained MLP network in hardware for inference only (no training re
 - Contact the TA on Telegram before requesting an extension
 - Students have 4 coupon days available
 
---- -->
+ -->
 
 ## Key Learning Outcomes
 
@@ -123,4 +123,4 @@ Implement the trained MLP network in hardware for inference only (no training re
 - A Jupyter notebook is provided for quick experimentation
 - Dataset files include both raw (.orig) and preprocessed (.tes) versions
 
----
+
