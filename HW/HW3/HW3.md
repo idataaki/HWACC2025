@@ -10,7 +10,7 @@
 
 **Submission Format:** A `zip` file containing all required components.
 
----
+
 
 ## Overview
 
@@ -18,7 +18,7 @@ This assignment focuses on implementing a **Convolutional Neural Network (LeNet)
 
 CNNs are crucial for image processing tasks including classification, detection, and segmentation. The high computational cost of these networks makes hardware acceleration particularly important.
 
----
+
 
 ## LeNet Network Architecture
 
@@ -41,7 +41,7 @@ The LeNet architecture is detailed in Table 2.2 of the reference textbook. The n
 - Two fully connected layers
 - Total parameters: ~60,000 weights
 
----
+
 
 ## Dataset
 
@@ -55,7 +55,7 @@ The LeNet architecture is detailed in Table 2.2 of the reference textbook. The n
 **Important Note:**
 LeNet expects 32×32 input, so you must apply **zero-padding** to convert 28×28 images to 32×32. This padding must be applied in both software training and hardware implementation.
 
----
+
 
 ## Dataflows
 
@@ -67,7 +67,7 @@ Three fundamental dataflow strategies will be implemented (see Section 5.6 of th
 
 Each dataflow affects the accelerator architecture differently. Reference Table 5.1 in the textbook for architectures using these dataflows.
 
----
+
 
 ## Systolic Array Architecture
 
@@ -80,7 +80,7 @@ The systolic array is a common architecture for general matrix multiplication an
 
 **Example:** Figure 5.16 from the textbook shows the WS dataflow in NeuFlow, where PEs compute MAC operations and are connected in a systolic array to calculate partial sums.
 
----
+
 
 ## Memory Architecture
 
@@ -97,7 +97,7 @@ The systolic array is a common architecture for general matrix multiplication an
 
 Load weights into memory modules and execute the network using these stored weights.
 
----
+
 
 ## Part 1: Software Implementation
 
@@ -116,7 +116,7 @@ Train the LeNet network and extract weights for hardware implementation.
 - Extracted weight files
 - Training accuracy report
 
----
+
 
 ## Part 2: Hardware Implementation
 
@@ -156,7 +156,7 @@ You must create **three separate hardware implementations**, each using one data
 - Zero-padding can be done on original images or during hardware preprocessing
 - Read dataset files directly in HDL code
 
----
+
 
 ## Part 3: Evaluation
 
@@ -193,7 +193,7 @@ After synthesis and implementation in Vivado, extract and compare:
 - Which dataflow is most power-efficient?
 - Discuss trade-offs between the three approaches
 
----
+
 
 ## Bonus Section: Two-Level Memory Hierarchy
 
@@ -218,7 +218,7 @@ Optimize performance using a two-level memory system.
 - Perform computations using fast Level 1 memory
 - Measure performance improvement
 
----
+
 
 <!-- ## Submission Guidelines
 
@@ -238,7 +238,7 @@ Optimize performance using a two-level memory system.
 - Contact TA on Telegram before requesting extension
 - Students have 4 coupon days available
 
---- -->
+ -->
 
 ## Key Learning Outcomes
 
@@ -258,4 +258,4 @@ Optimize performance using a two-level memory system.
 - Reference textbook Figure 5.16: NeuFlow architecture
 - Fashion MNIST: https://github.com/zalandoresearch/fashion-mnist
 
----
+

@@ -10,13 +10,13 @@
 
 **Submission Format:** A `zip` file containing all required components.
 
----
+
 
 ## Overview
 
 This assignment focuses on **quantization** and **pruning** techniques for Convolutional Neural Networks (CNNs). Students will implement quantization methods to reduce model size and computational complexity while maintaining acceptable accuracy levels.
 
----
+
 
 ## What is Quantization and Why Use It?
 
@@ -35,7 +35,7 @@ As shown in Figure 1 (from reference [1]), integer operations are significantly 
 
 ![area and energy efficiency of different precision](/HWACC2025/pics/area-energy-different-precision.png)*Figure 1*
 
----
+
 
 ## Quantization Methods
 
@@ -64,7 +64,7 @@ Given tensor: `[43.21, -44.93, 0, 22.99, -43.93, -11.35, 38.48, -20.49, -38.61, 
 
 **Use Case:** Best for weights with symmetric distribution around zero (e.g., neural network weights).
 
----
+
 
 ### 2. Asymmetric Quantization
 
@@ -91,7 +91,7 @@ Same tensor as above:
 
 **Use Case:** Better for activations and layer outputs with biased or non-symmetric distributions.
 
----
+
 
 ## Post-Training Quantization (PTQ)
 
@@ -105,7 +105,7 @@ Quantization is applied **after** the model is fully trained with high precision
 
 **Goal:** Minimize model size and improve inference speed while maintaining acceptable accuracy.
 
----
+
 
 ## Implementation
 
@@ -131,7 +131,7 @@ Quantization is applied **after** the model is fully trained with high precision
   - X-axis: Precision level (bit-width)
   - Y-axis: Model accuracy
 
----
+
 
 ### Step 2: PyTorch-Based Quantization
 
@@ -156,7 +156,7 @@ Quantization is applied **after** the model is fully trained with high precision
 - Accuracy comparison table
 - Plot: Accuracy vs. Bit-width (similar to Step 1)
 
----
+
 
 ## Evaluation Criteria
 
@@ -180,7 +180,7 @@ Quantization is applied **after** the model is fully trained with high precision
 - Which quantization method (symmetric vs. asymmetric) works better for this task?
 - At what bit-width does accuracy significantly degrade?
 
----
+
 
 ## Key Learning Outcomes
 
@@ -201,4 +201,4 @@ Quantization is applied **after** the model is fully trained with high precision
 
 [3] Fashion-MNIST Dataset: https://github.com/zalandoresearch/fashion-mnist
 
----
+

@@ -10,13 +10,11 @@
 
 **Submission Format:** A `zip` file containing all required components.
 
----
 
 ## Overview
 
 This assignment introduces **CUDA programming** for GPU acceleration. Students will implement the **Softmax activation function** using CUDA and optimize its performance by experimenting with different block sizes and thread configurations.
 
----
 
 ## Introduction to CUDA
 
@@ -40,7 +38,6 @@ This assignment introduces **CUDA programming** for GPU acceleration. Students w
 
 Students should refer to the resources provided in the References section to learn CUDA programming.
 
----
 
 ## Softmax Activation Function
 
@@ -83,7 +80,6 @@ All outputs are between 0 and 1. Sum of all outputs equals 1 and outputs can be 
 - Both outputs between 0 and 1
 - Softmax is **Guaranteed** to sum to 1, Sigmoid is not
 
----
 
 ## Why Use CUDA for Softmax?
 
@@ -93,7 +89,6 @@ All outputs are between 0 and 1. Sum of all outputs equals 1 and outputs can be 
 
 Despite the sequential nature, CUDA and GPU architecture enable parallelization as different stages of Softmax can be parallelized and also some independent operations can be split and executed in parallel.
 
----
 
 ## Assignment Task: Performance Evaluation
 
@@ -155,7 +150,6 @@ Implement and test with different block sizes (32, 64, 128, 256, etc. threads pe
    - Results and analysis
    - Conclusions and recommendations
 
----
 
 ## Implementation Guidelines
 
@@ -198,7 +192,6 @@ def softmax(input_vector):
     return probabilities
 ```
 
----
 
 ## Testing and Validation
 
@@ -216,7 +209,6 @@ def softmax(input_vector):
 3. **Consistent conditions:** Same GPU state for all tests
 4. **Timing method:** Use CUDA events or appropriate timing API
 
----
 
 ## Key Learning Outcomes
 
@@ -228,7 +220,6 @@ def softmax(input_vector):
 - Applying GPU acceleration to real neural network operations
 - Understanding Vision Transformer architecture
 
----
 
 ## References
 
@@ -244,7 +235,6 @@ def softmax(input_vector):
 
 [4] P. Belagatti, "Understanding the Softmax Activation Function: A Comprehensive Guide," SingleStore, Mar. 11, 2024. https://www.singlestore.com/blog/a-guide-to-softmax-activation-function/
 
----
 
 ## Additional Notes
 
@@ -255,16 +245,6 @@ def softmax(input_vector):
 - **Thread Safety:** Ensure no race conditions in parallel code
 - **Block Size Limits:** Maximum threads per block is typically 1024
 - **Shared Memory:** Use for frequently accessed data
-
-### Common Pitfalls to Avoid
-
-- Not handling edge cases (empty vectors, very large values)
-- Ignoring numerical stability (exp overflow)
-- Incorrect memory transfer sizes
-- Not synchronizing GPU operations when needed
-- Forgetting to measure actual kernel time (excluding transfer time)
-
----
 
 ## Input Specification
 
@@ -277,9 +257,3 @@ def softmax(input_vector):
 - Random vectors of length 197
 - Multiple iterations for statistical reliability
 - Vary input value ranges to test robustness
-
----
-
-Good luck!
-
-**Instructor:** Rahmati

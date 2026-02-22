@@ -4,7 +4,6 @@
 ## Overview
 This repository contains materials for the **Hardware Accelerators** course, including assignments, projects, and resources related to hardware acceleration techniques.
 
----
 
 ## Table of Contents
 
@@ -32,7 +31,6 @@ This repository contains materials for the **Hardware Accelerators** course, inc
 | [Presentation Guidelines](Papers/Papers-for-Presentation.md) | Guidelines for student paper presentations |
 | [Selected Articles](Papers/SelectedArticles.md) | Research papers from HPCA, ISCA, MICRO |
 
----
 
 ## Instructor
 - **Assistant Professor:** [Dara Rahmati](https://scholar.google.com/citations?user=xwJgOl0AAAAJ&hl=en)
@@ -42,13 +40,13 @@ This repository contains materials for the **Hardware Accelerators** course, inc
 - **[Matin Firoozbakht](https://github.com/matinfirooz)**
 - **[Ida Taaki](https://github.com/idataaki)**
 
----
+
 
 ## Course Book
 We use the following book as a reference:
 [**"Efficient Processing of Deep Neural Networks"**](https://link.springer.com/book/10.1007/978-3-031-01766-7)
 
----
+
 
 ## Tools & Technologies
 
@@ -62,12 +60,10 @@ We use the following book as a reference:
 | Timeloop-Accelergy | Energy estimation |
 | MAESTRO | Dataflow analysis |
 
----
 
 ## Contribution
 For questions or contributions, please open an issue or submit a pull request.
 
----
 
 **Shahid Beheshti University - Faculty of Computer Engineering**
 **Academic Year: 2024-2025 | Spring Semester**
