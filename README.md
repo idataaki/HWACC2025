@@ -1,4 +1,5 @@
 # HWACC2025
+![banner](pics/banner.jpg)
 # Hardware Accelerators Course - Spring 2025
 
 ## Overview
@@ -60,6 +61,12 @@ We use the following book as a reference:
 | Timeloop-Accelergy | Energy estimation |
 | MAESTRO | Dataflow analysis |
 
+## Helpful Links
+- [CS/ECE 590 Computer Architecture and Hardware Acceleration - Duke ](https://apexlab-duke.github.io/cs590-comparch-acc-sp2021/)
+- [Hardware Accelerators for Machine Learning (CS 217) - Stanford University, Winter 2026](https://cs217.stanford.edu/)
+- [Tutorial on Hardware Accelerators for Deep Neural Networks - Eyeriss MIT](https://eyeriss.mit.edu/tutorial.html)
+- [Designing Efficient Accelerators for Deep Neural Networks - poster](https://www.bu.edu/summer/files/2022/01/Brown-Steffen-RISE-Poster-2021.pdf)
+- [A Systolic Array-based General Convolutional Neural Network Accelerator](https://kth.diva-portal.org/smash/get/diva2:1942273/FULLTEXT02.pdf)
 
 ## Contribution
 For questions or contributions, please open an issue or submit a pull request. You also can always reach to us directly or via Email.
