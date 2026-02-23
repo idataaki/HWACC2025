@@ -13,6 +13,8 @@ This assignment aims to implement and understand the **KMeans** algorithm and da
 
 **Note:** The implementation of **KMeans** must be done **without** using pre-built libraries. Only basic programming language features should be used. However, **Numpy**, **Pandas**, **Matplotlib**, and **Seaborn** are allowed solely for data reading and visualization.  
 
+Additionally, the main goal of this assignment is to help students work with **raw data** and learn practical ways to relate data points to each other through similarity and grouping, using the K-Means algorithm as a hands-on learning tool.
+
 
 
 ## KMeans Algorithm Explanation  
